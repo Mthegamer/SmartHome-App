@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>SmartHome App</title>
+    </head>
+    <body>
+        <header>
+            <div class="btnWrapper">
+                <a href="" id="backBtn"></a>
+            </div>
+            <h1>SmartHome App</h1>
+            <div class="btnWrapper">
+                <a href="" id="settingBtn"></a>
+            </div>
+        </header>
+        
+        <section id="ajaxLoader" class="">
+            <div class="loaderWrapper"></div>
+        </section>
+        
+        <section id="setting" class="">
+            <div class="wrapper">
+                <h2>Settings</h2>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Enable PIN Lock</h3>
+                    <input type="checkbox" name="pinlock" id="pinlock" value="" />
+                    <label for="pinlock">P</label>
+                </div>
+            </div>
+            <h4 class="settingMessage"></h4>
+        </section>
+        
+        <section id="register" class="">
+            <form>
+                <h2>Register</h2>
+                <h3 class="registerLabel">Username</h3>
+                <input type="text" name="username" id="username" placeholder="abcd0001" autocorrect="off"
+                       autocapitalize="off" autocomplete="off" />
+                <h3 class="registerLabel">Password</h3>
+                <input type="password" name="pin" id="pin" pattern="[0-9]*" maxlength="4" placeholder="4 digit number"
+                       autocomplete="off" />
+                <input type="submit" id="submitBtn" value="Sign Up" />
+            </form>
+            <p class="registerError"></p>
+        </section>
+        
+        <section id="locked" class="">
+            <p class="display"></p>
+            <p class="pinError"></p>
+            <ul class="pins">
+                <li class="pin"><a href="" class="num" data-num="1">1</a></li>
+                <li class="pin"><a href="" class="num" data-num="2">2</a></li>
+                <li class="pin"><a href="" class="num" data-num="3">3</a></li>
+                <li class="pin"><a href="" class="num" data-num="4">4</a></li>
+                <li class="pin"><a href="" class="num" data-num="5">5</a></li>
+                <li class="pin"><a href="" class="num" data-num="6">6</a></li>
+                <li class="pin"><a href="" class="num" data-num="7">7</a></li>
+                <li class="pin"><a href="" class="num" data-num="8">8</a></li>
+                <li class="pin"><a href="" class="num" data-num="9">9</a></li>
+                <li class="pin"><a href="" class="num" data-num="*">*</a></li>
+                <li class="pin"><a href="" class="num" data-num="0">0</a></li>
+                <li class="pin"><a href="" class="num" data-num="#">#</a></li>
+            </ul>
+        </section>
+        
+        <section id="home" class="">
+            <ul class="tabs">
+                <li class="tab"><a href="#temperature" data-role="link"></a></li>
+                <li class="tab"><a href="#lights" data-role="link"></a></li>
+                <li class="tab"><a href="#garage" data-role="link"></a></li>
+                <li class="tab"><a href="#doors" data-role="link"></a></li>
+                <li class="tab"><a href="#alarm" data-role="link"></a></li>
+                <li class="tab"><a href="#appliances" data-role="link"></a></li>
+            </ul>
+        </section>
+        
+        <section data-role="zone" id="temperature" class="">
+            <div class="wrapper">
+                <h2>Temperature</h2>
+                <div id="tempBox">
+                    <button id="minusBtn" class="tempBtn">-</button>
+                    <button href="" id="plusBtn" class="tempBtn">+</button>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Fan</h3>
+                    <input type="checkbox" name="fan" id="prop-1" class="tempSets" data-role="control" value="" />
+                    <label for="prop-1">F</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Air Filter</h3>
+                    <input type="checkbox" name="airfilter" id="prop-2" class="tempSets" data-role="control" value="" />
+                    <label for="prop-2">A</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Heater</h3>
+                    <input type="checkbox" name="heater" id="prop-3" class="tempSets" data-role="control" value="" />
+                    <label for="prop-3">H</label>
+                </div>
+                <div id="formbox" style="height: 28px; border-bottom: 1px solid gray;">
+                    <h3 class="zoneLabel">Air Conditioner</h3>
+                    <input type="checkbox" name="cooler" id="prop-4" class="tempSets" data-role="control" value="" />
+                    <label for="prop-4">C</label>
+                </div>
+                <div id="tempControl">
+                    <input type="number" name="temp" id="prop-20" class="tempSets" data-role="control" value=""
+                           min="16" max="30" />
+                </div>
+            </div>
+        </section>
+        
+        <section data-role="zone" id="lights" class="">
+            <div class="wrapper">
+                <h2>Lights</h2>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Front - Outside</h3>
+                    <input type="checkbox" name="frontoutside" id="prop-6" class="lightSets" data-role="control"
+                           value="" />
+                    <label for="prop-6">F-O</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Back - Outside</h3>
+                    <input type="checkbox" name="backoutside" id="prop-7" class="lightSets" data-role="control"
+                           value="" />
+                    <label for="prop-7">B-O</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Living Room</h3>
+                    <input type="checkbox" name="livingroom" id="prop-8" class="lightSets" data-role="control"
+                           value="" />
+                    <label for="prop-8">LV</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Kitchen</h3>
+                    <input type="checkbox" name="kitchen" id="prop-9" class="lightSets" data-role="control"
+                           value="" />
+                    <label for="prop-9">K</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Master Bedroom</h3>
+                    <input type="checkbox" name="bedroom" id="prop-10" class="lightSets" data-role="control"
+                           value="" />
+                    <label for="prop-10">MB</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Front Hall</h3>
+                    <input type="checkbox" name="fronthall" id="prop-11" class="lightSets" data-role="control"
+                           value="" />
+                    <label for="prop-11">FH</label>
+                </div>
+            </div>
+        </section>
+        
+        <section data-role="zone" id="garage" class="">
+            <div class="wrapper">
+                <h2>Garage</h2>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Garage Door</h3>
+                    <input type="checkbox" name="garagedoor" id="prop-5" class="garageSet" data-role="control"
+                           value="" />
+                    <label for="prop-5">GD</label>
+                </div>
+            </div>
+        </section>
+        
+        <section data-role="zone" id="doors" class="">
+            <div class="wrapper">
+                <h2>Doors</h2>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Front Door</h3>
+                    <input type="checkbox" name="frontdoor" id="prop-15" class="doorSets" data-role="control"
+                           value="" />
+                    <label for="prop-15">FD</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Back Door</h3>
+                    <input type="checkbox" name="backdoor" id="prop-16" class="doorSets" data-role="control"
+                           value="" />
+                    <label for="prop-16">BD</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Side Door</h3>
+                    <input type="checkbox" name="sidedoor" id="prop-17" class="doorSets" data-role="control"
+                           value="" />
+                    <label for="prop-17">SD</label>
+                </div>
+            </div>
+        </section>
+        
+        <section data-role="zone" id="alarm" class="">
+            <div class="wrapper">
+                <h2>Security</h2>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Alarm System</h3>
+                    <input type="checkbox" name="alarm" id="prop-19" class="alarmSet" data-role="control"
+                           value="" />
+                    <label for="prop-19">AS</label>
+                </div>
+            </div>
+        </section>
+        
+        <section data-role="zone" id="appliances" class="">
+            <div class="wrapper">
+                <h2>Smart Appliances</h2>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Coffee Maker</h3>
+                    <input type="checkbox" name="coffeemaker" id="prop-12" class="applianceSets" data-role="control"
+                           value="" />
+                    <label for="prop-12">CM</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Smart TV</h3>
+                    <input type="checkbox" name="smartTV" id="prop-13" class="applianceSets" data-role="control"
+                           value="" />
+                    <label for="prop-13">ST</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Washing Machine</h3>
+                    <input type="checkbox" name="washingmachine" id="prop-14" class="applianceSets" data-role="control"
+                           value="" />
+                    <label for="prop-14">WM</label>
+                </div>
+                <div id="formbox">
+                    <h3 class="zoneLabel">Skylight Blinds</h3>
+                    <input type="checkbox" name="skylightblinds" id="prop-18" class="applianceSets" data-role="control"
+                           value="" />
+                    <label for="prop-18">SB</label>
+                </div>
+            </div>
+        </section>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/tappy.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

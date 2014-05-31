@@ -1,0 +1,423 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/***** Default *****/
+* {
+	padding: 0;
+	margin: 0;	
+}
+
+html, body {
+    height: 100%;
+	background-color: #000;
+	color: #FFF;
+	font-size: 1em;
+}
+
+h1 {
+    width: 60%;
+    height: 30px;
+    float: left;
+    padding-top: 30px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.2em;
+    text-align: center;
+}
+
+h2 {
+    padding-bottom: 1rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+h3 {
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    text-align: left;
+    color: #000;
+}
+
+h4 {
+    padding: 1rem 2rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2;
+    color: #0000FF;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    color: #FF0000;
+}
+
+input, label, button {
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    outline: none;
+}
+
+
+/***** Header *****/
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+	height: 59px;
+    border-bottom: 1px solid gray;
+    background-color: #FF0000;
+}
+
+header a {
+    display: none;
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-image: none;
+}
+
+.btnWrapper {
+    width: 20%;
+    height: 60px;
+    float: left;
+}
+
+#backBtn.active {
+    display: block;
+    background: url("../img/back.svg") no-repeat 30% 70%;
+    background-size: 40%;
+}
+
+#settingBtn.active {
+    display: block;
+    background: url("../img/setting.svg") no-repeat 50% 70%;
+    background-size: 40%;
+}
+
+
+/***** Content *****/
+section {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    margin-top: 0.5rem;
+}
+
+section.active {
+    display: block;
+}
+
+
+/***** Register *****/
+form {
+    width: 100%;
+    margin: 2rem auto;
+    left: 0;
+    right: 0;
+}
+
+.registerLabel {
+    float: left;
+    width: 40%;
+    height: 30px;
+    padding: 7px 0;
+    line-height: 2;
+    text-indent: 5%;
+    background-color: #FFF;
+    border-bottom: 1px solid gray;
+}
+
+#username, #pin {
+    display: block;
+    float: left;
+    width: 60%;
+    height: 44px;
+    right: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+    color: #0000FF;
+    -webkit-appearance: none;
+}
+
+#submitBtn {
+    width: 100%;
+    height: 45px;
+    margin-top: 2rem;
+    background-color: #FFF;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+
+/***** Locked *****/
+#locked {
+    top: 40px;
+}
+
+.pins {
+    width: 72%;
+    padding: 2% 14%;
+    margin: 0 auto;
+    list-style: none;
+    overflow: hidden;
+}
+
+.pin {
+    display: block;
+    float: left;
+    width: 33.333%;
+    height: 80px;
+    color: #E0E0E2;
+}
+
+.num {
+    float: left;
+    width: 70%;
+    height: 70%;
+    margin: 5px 0 0 13px;
+    border: 1px solid #FFF;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 2.5;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5em;
+    background-color: maroon;
+    color: #FFF;
+}
+
+a[data-num="*"], a[data-num="#"] {
+    display: none;
+}
+
+.display {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto 0.5rem auto;
+    background-color: maroon;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+}
+
+.display span {
+    width: 25%;
+    height: 40px;
+    float: left;
+    padding-top: 10px;
+    font-size: 3em;
+    text-align: center;
+    color: #FFF;
+}
+
+
+/***** Home *****/
+.tabs {
+    width: 84%;
+    padding: 0 8%;
+    margin: 1rem auto;
+    list-style: none;
+	overflow: hidden;
+}
+
+.tab {
+    width: 50%;
+    height: 130px;
+    float: left;
+}
+
+[data-role=link] {
+	height: 100%;
+	width: 100%;
+	display: block;
+	text-decoration: none;
+}
+
+
+/***** Zones *****/
+.wrapper {
+    margin: 1rem auto;
+}
+
+#formbox {
+    display: block;
+    clear: both;
+    height: 29px;
+    padding: 5px 2rem;
+    border-top: 1px solid gray;
+    background-color: maroon;
+}
+
+#formbox:last-child {
+    height: 28px;
+    border-bottom: 1px solid gray;
+}
+
+#formbox h3 {
+    color: #FFF;
+}
+
+.zoneLabel {
+    width: 50%;
+    height: 25px;
+    float: left;
+    line-height: 30px;
+}
+
+#tempBox {
+    display: block;
+    clear: both;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+#tempControl {
+    display: block;
+    height: 60px;
+    margin-top: -15rem;
+}
+
+.tempBtn {
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem 3rem;
+    border-radius: 15px;
+    background-color: gray;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+#minusBtn {
+    float: left;
+}
+
+#plusBtn {
+    float: right;  
+}
+
+
+/***** Inputs *****/
+input[type=number] {
+    width: 50px;
+    height: 28px;
+    padding: 15px;
+    margin: 0 7.5rem;
+    font-size: 1.8em;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: maroon;
+    color: #FFF;
+}
+
+input[type=checkbox]:empty {
+    width: 0;
+    height: 0;
+    margin-left: -9999px;
+}
+
+input[type=checkbox]:empty ~ label {
+    position: relative;
+    width: 60px;
+    height: 25px;
+    float: right;
+    line-height: 1.5;
+    text-align: left;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=checkbox]:empty ~ label:before, 
+input[type=checkbox]:empty ~ label:after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: inset 0 0.2em 0 rgba(0,0,0,0.2);
+    -webkit-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+}
+
+input[type=checkbox]:empty ~ label:after {
+    width: 50%;
+    background-color: #fff;
+    box-shadow: inset 0 -0.2em 0 rgba(0,0,0,0.2);
+}
+
+input[type=checkbox]:checked ~ label:before {
+    background-color: green;
+}
+
+input[type=checkbox]:checked ~ label:after {
+    margin-left: 1.9rem;
+}
+
+
+/***** AJAX Loader *****/
+#ajaxLoader {
+    height: 80%;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.loaderWrapper {
+    width: 100px;
+    height: 100px;
+    margin: 10rem auto;
+    background-image: url("../img/ajax-loader.GIF");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 80%;
+}
+
+
+/***** Icons *****/
+.tab a[href="#temperature"] {
+    background: url("../img/temperature.svg") no-repeat center center;
+    background-size: 60%;
+}
+
+.tab a[href="#lights"] {
+    background: url("../img/lights.svg") no-repeat center center;
+    background-size: 60%;
+}
+
+.tab a[href="#garage"] {
+    background: url("../img/garage.svg") no-repeat center center;
+    background-size: 60%;
+}
+
+.tab a[href="#doors"] {
+    background: url("../img/doors.svg") no-repeat center center;
+    background-size: 60%;
+}
+
+.tab a[href="#alarm"] {
+    background: url("../img/alarm.svg") no-repeat center center;
+    background-size: 60%;
+}
+
+.tab a[href="#appliances"] {
+    background: url("../img/appliances.svg") no-repeat center center;
+    background-size: 60%;
+}
+
